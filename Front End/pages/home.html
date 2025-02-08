@@ -6,7 +6,28 @@
         <link rel="stylesheet" href="core.css">
         <title>WealthWise</title>
     </head>
+    <div class="chat-container">
+        <div class="chat-icon" onclick="toggleChat()">
 
+        </div>
+        <div class="chat-box" id="chatBox">
+            <div class="chat-header">
+                Chat
+                <span class="close-chat" onclick="toggleChat()">×</span>
+            </div>
+            <div class="chat-messages">
+                <p>Welcome! How can I help you?</p>
+            </div>
+            <input type="text" class="chat-input" placeholder="Type a message...">
+        </div>
+    </div>
+
+    <script>
+        function toggleChat() {
+            var chatBox = document.getElementById("chatBox");
+            chatBox.style.display = chatBox.style.display === "none" || chatBox.style.display === "" ? "block" : "none";
+        }
+    </script>
     <body>
         <header>
             <a href="home.html" class="logo"><img src="resources/logo.png" alt="WealthWise Logo"></a>
@@ -61,97 +82,10 @@
             </div>
         <footer>© WealthWise 2024 All Rights Reserved</footer>
         </section>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-                margin: 0;
-                background-color: #f0f0f0;
-            }
-            .chat-container {
-                position: fixed;
-                bottom: 20px;
-                right: 20px;
-            }
-            .chat-icon {
-                width: 60px;
-                height: 60px;
-                background-color: #007bff;
-                border-radius: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            }
-            .chat-icon img {
-                width: 30px;
-                height: 30px;
-            }
-            .chat-box {
-                display: none;
-                width: 300px;
-                height: 400px;
-                background: white;
-                border-radius: 10px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                padding: 15px;
-                position: absolute;
-                bottom: 70px;
-                right: 0;
-            }
-            .chat-header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                font-weight: bold;
-                padding-bottom: 10px;
-                border-bottom: 1px solid #ddd;
-            }
-            .close-chat {
-                cursor: pointer;
-                color: red;
-                font-size: 18px;
-            }
-            .chat-messages {
-                height: 300px;
-                overflow-y: auto;
-                margin-top: 10px;
-            }
-            .chat-input {
-                width: 100%;
-                padding: 5px;
-                margin-top: 10px;
-                border: 1px solid #ddd;
-                border-radius: 5px;
-            }
-        </style>
-    
-        <div class="chat-container">
-            <div class="chat-icon" onclick="toggleChat()">
 
-            </div>
-            <div class="chat-box" id="chatBox">
-                <div class="chat-header">
-                    Chat
-                    <span class="close-chat" onclick="toggleChat()">×</span>
-                </div>
-                <div class="chat-messages">
-                    <p>Welcome! How can I help you?</p>
-                </div>
-                <input type="text" class="chat-input" placeholder="Type a message...">
-            </div>
-        </div>
+    </head>
     
-        <script>
-            function toggleChat() {
-                var chatBox = document.getElementById("chatBox");
-                chatBox.style.display = chatBox.style.display === "none" || chatBox.style.display === "" ? "block" : "none";
-            }
-        </script>
+
             
     </body>
     
