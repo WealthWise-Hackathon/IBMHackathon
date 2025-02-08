@@ -1,0 +1,627 @@
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height:12%;
+    background-color: #e9e9f0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+    
+  .logo {
+    display: inline-block;
+  }
+    
+  .logo img {
+    width: 20%;
+  }
+    
+  .navigation {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    margin-right: 4%;
+    padding: 0;
+  }
+     
+  .navigation a {
+    float: left;
+    color:black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: solid;
+    display: block;
+  }
+    
+  .navigation a:hover {
+    background-color: #fff;
+    color: rgb(30, 141, 189);
+    text-decoration: none;
+  }
+  
+  body {
+      background-color: #fff;
+      margin: 0;
+      font-family: sans-serif;
+  }
+  
+  .hero {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+  
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('banner.jpeg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  .hero h1 {
+      font-size: 5em;
+      margin-top: 0;
+      margin-bottom: 0.5em;
+  }
+  .hero-button {
+      display: block;
+      width: 200px;
+      border: 3px solid white;
+      border-radius: 20px;
+      padding: 1em;
+      margin-top: 50px;
+      margin-left: auto;
+      margin-right: auto;
+      color:white;
+      text-decoration: none;
+      font-size: 1.5em;
+      background-color: rgba(147, 112, 219, 0.8);
+  }
+  .hero-button:hover {
+      background-color: aqua;
+  }
+  
+  .mortgage-area {
+    width: 80%;
+    margin: 50px auto;
+    padding: 40px;
+    height: 60vh; 
+    justify-content: space-evenly; 
+    color: white;
+    border-radius: 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('house.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  
+  .mortgage-area h1 {
+    font-size: 3em;
+    text-align: left; 
+  }
+  
+  .mortgage-area p {
+    font-size: 1.5em;
+    text-align: left; 
+    max-width: 60%; 
+  }
+  
+  .mortgage_button {
+    border: 3px solid white;
+    border-radius: 20px;
+    padding: 1em;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    background-color: rgba(147, 112, 219, 0.8);
+    text-align: center;
+    max-width: 200px; 
+  }
+  
+  .mortgage_button:hover {
+    background-color: hsla(260, 30%, 65%, 0.8);
+  }
+  .services-list {
+    text-align: center; 
+  }
+  
+  .services-list ul {
+    display: flex; 
+    justify-content: space-around; 
+    padding: 0;
+    list-style: none; 
+    margin-bottom: 20px; 
+  }
+  
+  .services-list li {
+    text-align: center; 
+    margin: 0 10px;
+  }
+  
+  .services-list img {
+    display: block;
+    margin: 10px auto; 
+    width: 80px; 
+    height: auto;
+  }
+  
+  .services-button {
+    display: inline-block; 
+    margin: 20px auto; 
+    border: 3px solid white;
+    border-radius: 20px;
+    padding: 1em;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    background-color: rgba(147, 112, 219, 0.8);
+  }
+  
+  .services-button a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .services-button:hover {
+    background-color: aqua;
+  }
+  
+  .mortgage-data {
+    width: 80%;
+    margin: 50px auto;
+    margin-top: 20%;
+    padding: 40px;
+    height: 60vh; 
+    color: white;
+    border-radius: 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('house.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    text-align: left;
+  }
+  .mortgage-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .mortgage-form label {
+    font-size: 1.2em;
+    color: white;
+  }
+  
+  .mortgage-form input {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+  }
+  
+  .mortgage-form input::placeholder {
+    color: #aaa;
+  }
+  
+  .mortgage-form #mortgage-submit {
+  align-self: right;
+    width: 150px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: rgba(147, 112, 219, 0.8);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+  
+  .mortgage-form #mortgage-submit:hover {
+    background-color: aqua;
+    color: black;
+  }
+  
+  .mission {
+    width: 80%;
+    margin: 50px auto;
+    margin-top: 20%;
+    padding: 40px;
+    height: 60vh; 
+    color: white;
+    border-radius: 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('team.jpeg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    text-align: left;
+  }
+  
+  .history {
+    padding: 20px;  
+    margin: 50px auto;
+  }
+  
+  .history h2 {
+    text-align: center;  
+  }
+  
+  .history #services-link {
+    text-align: center;
+  }
+  
+  .history #services-button {
+    align-self: right;
+    width: 150px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: rgba(147, 112, 219, 0.8);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+    
+  .history #services-button:hover {
+    background-color: aqua;
+    color: black;
+  }
+  
+  .faq-section {
+    width: 80%;
+    margin: 50px auto;
+    margin-top: 200px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+  .faq-section h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #2f2b53;
+    margin-bottom: 20px;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+  .accordion:after {
+    content: '\02795'; 
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2796"; 
+  }
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+  }
+  
+  .contact-area {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 120px auto;
+  }
+  
+  .contact-area h1 {
+    color: #2f2b53;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  .contact-area p {
+    color: #666;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+  }
+  
+  .contact-form {
+    display: grid;
+    grid-gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  #contact-button {
+    padding: 12px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #2f2b53;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #contact-button:hover {
+    background-color: #f39c12;
+  }
+  
+  .contact-input {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-input label {
+    font-size: 1em;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .contact-input input, .form-group textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact-input input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #2f2b53;
+    box-shadow: 0 0 5px rgba(47, 43, 83, 0.5);
+  }
+  
+  #services-title {
+    margin-top: 16%;
+    text-align: center;
+  }
+  .services-area {
+    margin: 50px auto;
+    padding: 40px;
+    color: black;
+    justify-content: space-between;
+    align-items: left;
+    text-align: center;
+  }
+  
+  
+  
+  
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .service-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-out;
+  }
+  
+  .service-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .service-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .service-icon img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .service-card h2 {
+    color: #2f2b53;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .service-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .features-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  .features-list li {
+    padding: 0.5rem 0;
+    color: #444;
+    position: relative;
+    padding-left: 1.5rem;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease-out;
+  }
+  
+  .features-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: rgba(147, 112, 219, 0.8);
+  }
+  
+  .features-list.visible li {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .learn-more-btn {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    background-color: rgba(147, 112, 219, 0.8);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .learn-more-btn:hover {
+    background-color: aqua;
+  }
+  
+  @media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .main-footer {
+      padding: 70px 0;
+      display: flex;
+      justify-content: space-evenly;
+      background-color: #2f2b53;
+    }
+  
+    .main-footer ul {
+      list-style: none;
+    }
+  
+    .main-footer h1 {
+      font-size: 22px;
+      line-height: 117%;
+      color: #ffffff;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+  
+    .main-footer h2 {
+      color: #ffffff;
+      font-weight: 500;
+      left: 10%;
+    }
+  
+    .main-footer ul li a {
+      color: #ffffffcc;
+      text-decoration: none;
+    }
+    .main-footer ul li a:hover {
+      text-decoration: none;
+      color: rgb(30, 141, 189);
+    }
+  
+    footer {
+      background-color: #2f2b53;
+      border-top: 1px solid #1d2742;
+      font-size: 17px;
+      padding: 15px 5px;
+      color: #ffffff;
+      text-align: center;
+    }
+  
+    .contact-details {
+      margin-top: 20px;
+    }
+  
+    .contact-details li {
+      list-style: none;
+      margin: 10px 0;
+    }
+  
+    .contact-details li a {
+      text-decoration: none;
+      color: #f1f1f1;
+    }
+  
+    .contact-details .fa {
+      color: #f1f1f1;
+      margin-right: 10px;
+    }
+  
+    .com ul li {
+      padding: 5px 0;
+    }
+  
+    @media only screen and (max-width: 749px) {
+      .main-footer {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+  
+      .info {
+        padding: 20px 0;
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .main-footer {
+        grid-template-columns: 1fr;
+      }
+  
+      .com {
+        padding: 20px 0;
+      }
+  
+    }
