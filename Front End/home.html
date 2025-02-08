@@ -6,42 +6,24 @@
         <link rel="stylesheet" href="core.css">
         <title>WealthWise</title>
     </head>
-    <div class="chat-container">
-        <div class="chat-icon" onclick="toggleChat()">
-            <img src="chatbot.logo.png" alt="WealthWise Logo">
-        </div>
-        <div class="chat-box" id="chatBox">
-            <div class="chat-header">
-                Chat
-                <span class="close-chat" onclick="toggleChat()">×</span>
-            </div>
-            <div class="chat-messages">
-                <p>Welcome! How can I help you?</p>
-            </div>
-            <input type="text" class="chat-input" placeholder="Type a message...">
-        </div>
-    </div>
-
-    <script>
-        function toggleChat() {
-            var chatBox = document.getElementById("chatBox");
-            chatBox.style.display = chatBox.style.display === "none" || chatBox.style.display === "" ? "block" : "none";
-        }
-    </script>
+    
     <body>
+    
         <header>
             <a href="home.html" class="logo"><img src="logo.png" alt="WealthWise Logo"></a>
             <nav class="navigation">
                 <a href="Learning_Center.html">Learning Center</a>
                 <a href="faq.html">FAQ's</a>
                 <a href="about.html">About Us</a>
-                <a href="mortgage_calc.html">Mortgage Eligibility</a>
-                <a href="services.html">Services</a>
+                <a href="calculator.html">Calculator</a>
             </nav>
         </header>
 
         <section class ="hero">
             <div class="hero-inner">
+                <video class="backgroundvid" autoplay loop muted>
+                    <source src="./ibmcovervideo.mp4" type="video/mp4">
+                </video>
                   <h1>Financial<em> Education</em></h1>
                   <p>Join our members on our world class learning platform</p>
                   <button class ="hero-button"><a href="learning.html">Learn More</a></button>
@@ -49,16 +31,35 @@
               </div>
         </section>
         <main>
-            <div class="mortgage-area">
+            <div class="calculator-area">
                 <h1>Personal Finance</h1>
                 <div class="mortgage-content">
                     <p>See if we can help you with your personal finance</p>
-                    <button class="mortgage_button"><a href="calculator.html">Check Now</a></button>
+                    <button class="calculator_button"><a href="calculator.html">Check Now</a></button>
                 </div>
             </div>
 
-
-
+            <div class="chat-container">
+                <div class="chat-icon" onclick="toggleChat()">
+                    <img src="chatbot.logo.png" alt="chatbot Logo">
+                </div>
+                <div class="chat-box" id="chatBox">
+                    <div class="chat-header">
+                        Chat
+                        <span class="close-chat" onclick="toggleChat()">×</span>
+                    </div>
+                    <div class="chat-messages">
+                        <p>Welcome! How can I help you?</p>
+                    </div>
+                    <input type="text" class="chat-input" placeholder="Type a message...">
+                </div>
+                <script>
+                    function toggleChat() {
+                        var chatBox = document.getElementById("chatBox");
+                        chatBox.style.display = chatBox.style.display === "none" || chatBox.style.display === "" ? "block" : "none";
+                    }
+                </script>
+            </div>
 
         <section id="footer">
             <div class="main-footer">

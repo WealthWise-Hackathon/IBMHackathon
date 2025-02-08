@@ -58,15 +58,23 @@ header {
     text-align: center;
     color: white;
   
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('banner.jpeg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
-  .backgroundvid{
-    background: url();
-  }
+
+  .backgroundvid {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    border-radius: 3%;
+}
+
   .hero h1 {
       font-size: 5em;
       margin-top: 0;
@@ -180,7 +188,7 @@ header {
     border-radius: 5px;
 }
   
-  .mortgage-area {
+  .calculator-area {
     width: 80%;
     margin: 50px auto;
     padding: 40px;
@@ -188,7 +196,7 @@ header {
     justify-content: space-evenly; 
     color: white;
     border-radius: 20px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('house.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('banner.jpeg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -196,18 +204,18 @@ header {
   }
   
   
-  .mortgage-area h1 {
+  .calculator-area h1 {
     font-size: 3em;
     text-align: left; 
   }
   
-  .mortgage-area p {
+  .calculator-area p {
     font-size: 1.5em;
     text-align: left; 
     max-width: 60%; 
   }
   
-  .mortgage_button {
+  .calculator_button {
     border: 3px solid white;
     border-radius: 20px;
     padding: 1em;
@@ -219,74 +227,12 @@ header {
     max-width: 200px; 
   }
   
-  .mortgage_button:hover {
+  .calculator_button:hover {
     background-color: hsla(260, 30%, 65%, 0.8);
   }
 
   
-  .mortgage-data {
-    width: 80%;
-    margin: 50px auto;
-    margin-top: 20%;
-    padding: 40px;
-    height: 60vh; 
-    color: white;
-    border-radius: 20px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('house.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: left;
-    text-align: left;
-  }
-  .mortgage-form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
   
-  .mortgage-form label {
-    font-size: 1.2em;
-    color: white;
-  }
-  
-  .mortgage-form input {
-    width: 100%;
-    max-width: 300px;
-    padding: 10px;
-    font-size: 1em;
-    border: 2px solid white;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #333;
-  }
-  
-  .mortgage-form input::placeholder {
-    color: #aaa;
-  }
-  
-  .mortgage-form #mortgage-submit {
-  align-self: right;
-    width: 150px;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    color: white;
-    background-color: rgba(147, 112, 219, 0.8);
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-align: center;
-  }
-  
-  .mortgage-form #mortgage-submit:hover {
-    background-color: aqua;
-    color: black;
-  }
   
   .mission {
     width: 80%;
