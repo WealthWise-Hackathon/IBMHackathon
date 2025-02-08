@@ -30,6 +30,34 @@
       max-width: 100px;
       margin-bottom: 1rem;
     }
+    .sidebar {
+      width: 250px;
+      background: #333;
+      color: white;
+      padding: 20px;
+      height: 100vh;
+    }
+    .sidebar a {
+      display: block;
+      padding: 10px;
+      margin: 5px 0;
+      text-decoration: none;
+      color: white;
+      background: #444;
+    }
+    .sidebar a:hover {
+      background: #555;
+    }
+    .content > div {
+      display: none;
+      padding: 20px;
+    }
+    .content > div:target {
+      display: block;
+    }
+    .content #default {
+      display: block;
+    }
     h1 {
       font-size: 2rem;
       color: #333;
@@ -60,6 +88,33 @@
   <h1>Welcome to My Secured Page</h1>
   <p>You have successfully logged in! Explore the features and functionalities of this secured application.</p>
   <a href="/logout">Logout</a>
+</div>
+<!-- Sidebar Navigation -->
+<div class="sidebar">
+  <h3>Finance Topics</h3>
+  <a href="#stocks">Stock Market</a>
+  <a href="#budgeting">Personal Budgeting</a>
+  <a href="#crypto">Cryptocurrency</a>
+</div>
+
+<!-- Dynamic Content Area -->
+<div class="content">
+  <div id="default">
+    <h2>Welcome</h2>
+    <p>Select a topic from the sidebar.</p>
+  </div>
+  <div id="stocks">
+    <h2>Stock Market Basics</h2>
+    <p>Learn how to invest in stocks, analyze trends, and manage risks.</p>
+  </div>
+  <div id="budgeting">
+    <h2>Personal Budgeting</h2>
+    <p>Understand how to manage your income, track expenses, and save money effectively.</p>
+  </div>
+  <div id="crypto">
+    <h2>Cryptocurrency</h2>
+    <p>Discover the world of Bitcoin, Ethereum, and how blockchain technology works.</p>
+  </div>
 </div>
 </body>
 </html>
