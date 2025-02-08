@@ -6,7 +6,28 @@
         <link rel="stylesheet" href="core.css">
         <title>WealthWise</title>
     </head>
+    <div class="chat-container">
+        <div class="chat-icon" onclick="toggleChat()">
 
+        </div>
+        <div class="chat-box" id="chatBox">
+            <div class="chat-header">
+                Chat
+                <span class="close-chat" onclick="toggleChat()">×</span>
+            </div>
+            <div class="chat-messages">
+                <p>Welcome! How can I help you?</p>
+            </div>
+            <input type="text" class="chat-input" placeholder="Type a message...">
+        </div>
+    </div>
+
+    <script>
+        function toggleChat() {
+            var chatBox = document.getElementById("chatBox");
+            chatBox.style.display = chatBox.style.display === "none" || chatBox.style.display === "" ? "block" : "none";
+        }
+    </script>
     <body>
         <header>
             <a href="home.html" class="logo"><img src="logo.png" alt="WealthWise Logo"></a>
@@ -60,30 +81,8 @@
         </section>
 
     </head>
-    <body>
     
-        <div class="chat-container">
-            <div class="chat-icon" onclick="toggleChat()">
 
-            </div>
-            <div class="chat-box" id="chatBox">
-                <div class="chat-header">
-                    Chat
-                    <span class="close-chat" onclick="toggleChat()">×</span>
-                </div>
-                <div class="chat-messages">
-                    <p>Welcome! How can I help you?</p>
-                </div>
-                <input type="text" class="chat-input" placeholder="Type a message...">
-            </div>
-        </div>
-    
-        <script>
-            function toggleChat() {
-                var chatBox = document.getElementById("chatBox");
-                chatBox.style.display = chatBox.style.display === "none" || chatBox.style.display === "" ? "block" : "none";
-            }
-        </script>
             
     </body>
     

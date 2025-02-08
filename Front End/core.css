@@ -122,15 +122,6 @@ header {
     display: none;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
-}
 .chat-container {
     position: fixed;
     bottom: 20px;
@@ -231,6 +222,7 @@ body {
   .mortgage_button:hover {
     background-color: hsla(260, 30%, 65%, 0.8);
   }
+
   
   .mortgage-data {
     width: 80%;
