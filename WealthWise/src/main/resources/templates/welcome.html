@@ -15,21 +15,6 @@
       align-items: center;
       height: 100vh;
     }
-    .welcome-container {
-      background: #fff;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      max-width: 1800px;
-      width: 90%;
-      max-height: 1002px;
-      height: 90%;
-    }
-    .welcome-container img {
-      max-width: 100px;
-      margin-bottom: 1rem;
-    }
     .sidebar {
       width: 250px;
       background: #333;
@@ -48,6 +33,17 @@
     .sidebar a:hover {
       background: #555;
     }
+    .content {
+      flex-grow: 1;
+      padding: 2rem;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 80%;
+      height: 90%;
+      display: flex;
+      flex-direction: column;
+    }
     .content > div {
       display: none;
       padding: 20px;
@@ -58,6 +54,7 @@
     .content #default {
       display: block;
     }
+
     h1 {
       font-size: 2rem;
       color: #333;
@@ -83,26 +80,25 @@
   </style>
 </head>
 <body>
-<div class="welcome-container">
-  <img src="https://via.placeholder.com/100" alt="Software Application" />
-  <h1>Welcome to My Secured Page</h1>
-  <p>You have successfully logged in! Explore the features and functionalities of this secured application.</p>
-  <a href="/logout">Logout</a>
-</div>
 <!-- Sidebar Navigation -->
 <div class="sidebar">
   <h3>Finance Topics</h3>
+  <a href="#welcome">Welcome</a>
   <a href="#stocks">Stock Market</a>
   <a href="#budgeting">Personal Budgeting</a>
   <a href="#crypto">Cryptocurrency</a>
 </div>
 
-<!-- Dynamic Content Area -->
+<!-- Content Area -->
 <div class="content">
-  <div id="default">
-    <h2>Welcome</h2>
-    <p>Select a topic from the sidebar.</p>
+  <!-- Welcome Container (Now inside content) -->
+  <div id="welcome">
+    <h1>Welcome to My Secured Page</h1>
+    <p>You have successfully logged in! Explore the features and functionalities of this secured application.</p>
+    <a href="/logout">Logout</a>
   </div>
+
+  <!-- Other Content Sections -->
   <div id="stocks">
     <h2>Stock Market Basics</h2>
     <p>Learn how to invest in stocks, analyze trends, and manage risks.</p>
