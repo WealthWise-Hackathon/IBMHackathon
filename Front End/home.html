@@ -6,7 +6,28 @@
         <link rel="stylesheet" href="core.css">
         <title>WealthWise</title>
     </head>
+    <div class="chat-container">
+        <div class="chat-icon" onclick="toggleChat()">
+            <img src="chatbot.logo.png" alt="WealthWise Logo">
+        </div>
+        <div class="chat-box" id="chatBox">
+            <div class="chat-header">
+                Chat
+                <span class="close-chat" onclick="toggleChat()">×</span>
+            </div>
+            <div class="chat-messages">
+                <p>Welcome! How can I help you?</p>
+            </div>
+            <input type="text" class="chat-input" placeholder="Type a message...">
+        </div>
+    </div>
 
+    <script>
+        function toggleChat() {
+            var chatBox = document.getElementById("chatBox");
+            chatBox.style.display = chatBox.style.display === "none" || chatBox.style.display === "" ? "block" : "none";
+        }
+    </script>
     <body>
         <header>
             <a href="home.html" class="logo"><img src="logo.png" alt="WealthWise Logo"></a>
@@ -21,35 +42,23 @@
 
         <section class ="hero">
             <div class="hero-inner">
-                  <h1>Empowering <em>You</em></h1>
-                  <p>Learn about we can do for you</p>
-                  <video autoplay muted loop plays-inline class ="backgroundvid">
-                    <source src = "ibmcovervideo.mp4" type = "video/mp4">
-                  </video>
-                  <button class ="hero-button"><a href="services.html">Learn More</a></button>
+                  <h1>Financial<em> Education</em></h1>
+                  <p>Join our members on our world class learning platform</p>
+                  <button class ="hero-button"><a href="learning.html">Learn More</a></button>
                 </div>
               </div>
         </section>
         <main>
             <div class="mortgage-area">
-                <h1>Mortgage Eligibility</h1>
+                <h1>Personal Finance</h1>
                 <div class="mortgage-content">
-                    <p>See if we can help you finance your dream home</p>
-                    <button class="mortgage_button"><a href="mortgage_calc.html">Check Now</a></button>
+                    <p>See if we can help you with your personal finance</p>
+                    <button class="mortgage_button"><a href="calculator.html">Check Now</a></button>
                 </div>
             </div>
 
-            <div class = "services-list">
-                <h2>Services We Provide</h2>
-                <ul>
-                    <li>Bank accounts<img src = "accounts.png"></li> 
-                    <li>Loans<img src = "loan.png"></li>
-                    <li>Consulting<img src = "consultant.png"></li>
-                       
-                </ul>
-                <p>Press Explore to find out more</p>
-                <button class = "services-button"><a href = "services.html">Explore</a></button>             
-            </div>
+
+
 
         <section id="footer">
             <div class="main-footer">
@@ -62,14 +71,19 @@
                 <h1>About</h1>
                 <ul>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
+                    <li><a href="learning.html">Learning Platform</a></li>
                     <li><a href="faq.html">FAQ's</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
                 </div>
             </div>
-        <footer>© WealthWise 2024 All Rights Reserved</footer>
+        <footer>© WealthWise 2025 All Rights Reserved</footer>
         </section>
+
+    </head>
+    
+
+            
     </body>
     
 </html>
