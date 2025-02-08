@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="core.css">
+        <title>Core Financial - FAQ'S</title>
+    </head>
+
+    <body>
+        <header>
+            <a href="home.html" class="logo"><img src="logo.png" alt="Core Financial Logo"></a>
+            <nav class="navigation">
+                <a href="contact.html">Contact Us</a>
+                <a href="about.html">About Us</a>
+                <a href="mortgage_calc.html">Mortgage Eligibility</a>
+                <a href="services.html">Services</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <button class = "accordion">What is Core Financial?</button>
+                <div class = "panel">
+                    <p>Core Financial is a leading financial services provider, offering a range of solutions including mortgage assistance, investment advice, and financial planning.</p>
+                </div>
+
+            <button class = "accordion">How can I contact Core Financial?</button>
+            <div class = "panel">
+                <p>You can reach us via phone at +91 xxxxxxxxx or email us at <a href="mailto:enquires@corefinancial.com">enquires@corefinancial.com</a>.</p>
+            </div>
+
+            <button class = "accordion">What services do you provide?</button>
+            <div class = "panel">
+                <p>We offer services such as mortgage eligibility checks, financial planning via consulting, investment management, bank accounts and much more. Check out our <a href="services.html">Services</a> page for details.</p>
+            </div>
+
+            <button class = "accordion">Why Core Financial?</button>
+            <div class = "panel">
+                <p>During our 20 years of serving you, we have refined our principles, processes and team to make sure that what we provide can not be matched anywere else in customer care. </p>
+            </div>
+
+            <script>
+                var acc = document.getElementsByClassName("accordion");
+                var i;
+
+                for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                    } else {
+                    panel.style.display = "block";
+                    }
+                });
+            }       
+            </script>
+        </main>
+
+        <section id="footer">
+            <div class="main-footer">
+                <div class="contact-details">
+                    <h1>Contact Us</h1>
+                    <li><a href="tel:+91">+91 xxxxxxxxx</a></li>
+                    <li><a href="mailto:enquires@corefinancial.com">enquires@corefinancial.com</a></li>
+                </div>
+                <div class="footer-links">
+                <h1>About</h1>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                </div>
+            </div>
+        <footer>© Core Financial 2024 All Rights Reserved</footer>
+        </section>
+    </body>
+    
+</html>
