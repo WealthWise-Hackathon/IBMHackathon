@@ -1,7 +1,7 @@
 package com.example.wealthwise.service;
 
-import com.example.lab1_s2.model.User;
-import com.example.lab1_s2.repo.UserRepository;
+import com.example.wealthwise.model.User;
+import com.example.wealthwise.repo.UserRepository;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;

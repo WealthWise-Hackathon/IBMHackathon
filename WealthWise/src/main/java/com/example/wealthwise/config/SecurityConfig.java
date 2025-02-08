@@ -1,6 +1,6 @@
 package com.example.wealthwise.config;
 
-import com.example.lab1_s2.service.UserDetails;
+import com.example.wealthwise.service.UserDetails;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

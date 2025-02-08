@@ -1,7 +1,7 @@
 package com.example.wealthwise.controller;
 
 
-import com.example.lab1_s2.service.UserService;
+import com.example.wealthwise.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

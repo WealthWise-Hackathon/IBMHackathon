@@ -1,7 +1,7 @@
 package com.example.wealthwise.service;
 
-import com.example.lab1_s2.model.User;
-import com.example.lab1_s2.repo.UserRepository;
+import com.example.wealthwise.model.User;
+import com.example.wealthwise.repo.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
