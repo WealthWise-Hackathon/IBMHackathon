@@ -1,6 +1,6 @@
 package com.example.wealthwise.repo;
 
-import com.example.lab1_s2.model.User;
+import com.example.wealthwise.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
