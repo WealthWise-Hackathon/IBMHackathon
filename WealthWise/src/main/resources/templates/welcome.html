@@ -77,6 +77,105 @@
     a:hover {
       background-color: #0056b3;
     }
+
+    h1 {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: #555;
+      margin-bottom: 2rem;
+    }
+
+    a {
+      display: inline-block;
+      padding: 0.8rem 1.2rem;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #0056b3;
+    }
+
+    img {
+      margin-bottom: 20px;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    label {
+      font-size: 1.1em;
+      margin-bottom: 10px;
+      color: #555;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      margin-bottom: 15px;
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+
+    button {
+      padding: 12px 20px;
+      background-color: #4CAF50;
+      color: white;
+      margin-bottom: 15px;
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .alert {
+      font-size: 1.2em;
+      color: #e74c3c;
+      margin-top: 15px;
+    }
+    .question p {
+      font-size: 1.1em;
+      margin-bottom: 10px;
+    }
+
+    .question input {
+      margin: 5px 0;
+    }
+
+    input[type="submit"] {
+      padding: 12px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      font-size: 1.1em;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
   </style>
 </head>
 <body>
@@ -102,7 +201,7 @@
   <!-- Welcome Container (Now inside content) -->
   <div id="welcome">
     <h1>Welcome to My Secured Page</h1>
-    <p>You have successfully logged in! Explore the features and functionalities of this secured application.</p>
+    <p>You have successfully logged in! <br> Explore the features and functionalities of this secured application.</p>
     <p>Your current Quiz score is: <span th:text="${score}">0/3</span></p>
     <a href="/logout">Logout</a>
   </div>
@@ -135,6 +234,42 @@
       <li><strong>Envelope system:</strong> Physical cash is allocated to different spending categories.</li>
     </ul>
     <p>Tracking expenses and adjusting the budget as income or costs change is essential for long-term financial health.</p>
+
+    <img th:src="@{/piggy.png}" height="250px" width="250px" alt="Piggy Bank">
+    <H1>How bad are your spending habits?</H1>
+    <form th:action="@{/submit}" th:object="${user}" method="post" onsubmit="calculateAnnualCost(); return false;">
+      <label for="price">Enter the price of a product you buy daily : </label>
+      <input type="text" id="price" placeholder="Enter your price" required>
+
+
+      <input type="text" id="Product" placeholder="Enter your Product" required>
+
+      <button class="buttona" type="submit">Submit</button>
+    </form>
+
+    <script>
+      function calculateAnnualCost() {
+        const price = parseFloat(document.getElementById('price').value);
+        const product = document.getElementById('Product').value;
+        if (!isNaN(price) && product.trim() !== "") {
+          const annualCost = price * 365;
+          alert("Your annual spending on " + product + " is: £" + annualCost.toFixed(2));
+        } else {
+          alert("Please enter a valid number for the price and a product name.");
+        }
+      }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
     <a href="https://www.investopedia.com/terms/b/budget.asp" target="_blank">What is budgeting?</a>
     <a href="https://www.ramseysolutions.com/budgeting/how-to-budget" target="_blank">How to create a budget</a>
   </div>
@@ -165,10 +300,10 @@
         <p><strong>1. What is a stock?</strong></p>
         <input type="radio" name="q1" value="a"> A type of cryptocurrency <br>
         <input type="radio" name="q1" value="b"> Ownership in a company <br>
-        <input type="radio" name="q1" value="c"> A government bond <br>
+          <input type="radio" name="q1" value="c"> A government bond <br>
       </div>
 
-      <!-- Question 2 -->
+        <!-- Question 2 -->
       <div class="question">
         <p><strong>2. What is the 50/30/20 rule?</strong></p>
         <input type="radio" name="q2" value="a"> 50% stocks, 30% bonds, 20% savings <br>
@@ -181,7 +316,8 @@
         <p><strong>3. Which cryptocurrency is known as "digital gold"?</strong></p>
         <input type="radio" name="q3" value="a"> Bitcoin <br>
         <input type="radio" name="q3" value="b"> Ethereum <br>
-        <input type="radio" name="q3" value="c"> Dogecoin <br>
+        <input type="radio" name="q3" value="c"> ChillGuy Coin <br>
+
       </div>
 
       <!-- Submit Button -->
