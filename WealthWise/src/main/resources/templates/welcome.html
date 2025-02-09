@@ -40,9 +40,10 @@
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       width: 80%;
-      height: 90%;
+      height: 100vh;
       display: flex;
       flex-direction: column;
+      overflow-y: auto;
     }
     .content > div {
       display: none;
@@ -176,6 +177,15 @@
     input[type="submit"]:hover {
       background-color: #0056b3;
     }
+
+    #budgeting {
+      max-height: 600px; /* Limit the height of the budgeting box */
+      overflow-y: auto; /* Enable scrolling within the budgeting section if the content exceeds max-height */
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
   </style>
 </head>
 <body>
@@ -259,17 +269,7 @@
         }
       }
     </script>
-
-
-
-
-
-
-
-
-
-
-
+    <p></p>
     <a href="https://www.investopedia.com/terms/b/budget.asp" target="_blank">What is budgeting?</a>
     <a href="https://www.ramseysolutions.com/budgeting/how-to-budget" target="_blank">How to create a budget</a>
   </div>
