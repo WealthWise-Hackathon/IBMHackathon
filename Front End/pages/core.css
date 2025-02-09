@@ -242,7 +242,7 @@ header {
     height: 60vh; 
     color: white;
     border-radius: 20px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('team.jpeg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../resources/team.jpeg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -285,6 +285,27 @@ header {
     background-color: aqua;
     color: black;
   }
+
+  .differences {
+    text-align: center;
+    width: 40%;
+    margin: 50px ;
+    padding: 40px;
+    height: 60vh; 
+    color: white;
+    border-radius: 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../resources/about.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: left;
+    text-align: left;
+  }
+
   
   .faq-section {
     width: 80%;
