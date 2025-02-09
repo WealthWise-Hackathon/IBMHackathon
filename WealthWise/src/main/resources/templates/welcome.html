@@ -80,6 +80,13 @@
   </style>
 </head>
 <body>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (!window.location.hash) {
+      window.location.hash = "#welcome";
+    }
+  });
+</script>
 <!-- Sidebar Navigation -->
 <div class="sidebar">
   <h3>Finance Topics</h3>
@@ -96,7 +103,7 @@
   <div id="welcome">
     <h1>Welcome to My Secured Page</h1>
     <p>You have successfully logged in! Explore the features and functionalities of this secured application.</p>
-    <p>Your current score is: <span th:text="${score}">0</span></p>
+    <p>Your current Quiz score is: <span th:text="${score}">0/3</span></p>
     <a href="/logout">Logout</a>
   </div>
 
