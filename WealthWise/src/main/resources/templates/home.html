@@ -1,92 +1,89 @@
 <!DOCTYPE html>
-<html lang = "en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="core.css">
-        <title>WealthWise</title>
-    </head>
-    
-    <body>
-    
-        <header>
-            <a href="home.html" class="logo"><img src="../../../../../Front%20End/resources/logo.png" alt="WealthWise Logo"></a>
-            <nav class="navigation">
-                <a href="learning.html">Learning Center</a>
-                <a href = "calculator.html">Calculator</a>
-                <a href="faq.html">FAQ's</a>
-                <a href="about.html">About Us</a>
-            </nav>
-        </header>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/core.css}">
+    <title>WealthWise</title>
+</head>
 
-        <section class ="hero">
-            <div class="hero-inner">
-                <video class="backgroundvid" autoplay loop muted>
-                    <source src="../../../../../Front%20End/resources/ibmcovervideo.mp4" type="video/mp4">
-                </video>
-                  <h1>Financial<em> Education</em></h1>
-                  <p>Join our members on our world class learning platform</p>
-                  <button class ="hero-button"><a href="learning.html">Learn More</a></button>
-                </div>
-              </div>
-        </section>
-        <main>
-            <div class="calculator-area">
-                <h1>Personal Finance</h1>
-                <div class="mortgage-content">
-                    <p>Model with our calculator and start learning about budgeting</p>
-                    <button class="calculator_button"><a href="calculator.html">Start Now</a></button>
-                </div>
-            </div>
-        </main>
+<body>
 
-            <div class="chat-container">
-                <div class="chat-icon" onclick="toggleChat()">
-                    <img src="../../../../../Front%20End/resources/chatbot.logo.png" alt="chatbot Logo">
-                </div>
-                <div class="chat-box" id="chatBox">
-                    <div class="chat-header">
-                        Chat
-                        <span class="close-chat" onclick="toggleChat()">×</span>
-                    </div>
-                    <div class="chat-messages">
-                        <p>Welcome! How can I help you?</p>
-                    </div>
-                    <input type="text" class="chat-input" placeholder="Type a message...">
-                </div>
-                <script>
-                    function toggleChat() {
-                        var chatBox = document.getElementById("chatBox");
-                        chatBox.style.display = chatBox.style.display === "none" || chatBox.style.display === "" ? "block" : "none";
-                    }
-                </script>
-            </div>
+<header>
+    <a th:href="@{/home}" class="logo">
+        <img th:src="@{/logo.png}" alt="WealthWise Logo">
+    </a>
+    <nav class="navigation">
+        <a th:href="@{/learning}">Learning Center</a>
+        <a th:href="@{/calculator}">Calculator</a>
+        <a th:href="@{/faq}">FAQ's</a>
+        <a th:href="@{/about}">About Us</a>
+    </nav>
+</header>
 
-        <section id="footer">
-            <div class="main-footer">
-                <div class="contact-details">
-                    <h1>Contact Us</h1>
-                    <ul>
-                        <li><a href="tel:+91">+91 xxxxxxxxx</a></li>
-                        <li><a href="mailto:enquires@WealthWise.com">enquires@WealthWise.com</a></li>
-                    </ul>
-                    
-                </div>
-                <div class="footer-links">
-                <h1>About</h1>
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="faq.html">FAQ's</a></li>
-                </ul>
-                </div>
-            </div>
-        <footer>© WealthWise 2025 All Rights Reserved</footer>
-        </section>
+<section class="hero">
+    <div class="hero-inner">
+        <video class="backgroundvid" autoplay loop muted>
+            <source th:src="@{/ibmcovervideo.mp4}" type="video/mp4">
+        </video>
+        <h1>Financial <em>Education</em></h1>
+        <p>Join our members on our world-class learning platform</p>
+        <button class="hero-button"><a th:href="@{/learning}">Learn More</a></button>
+    </div>
+</section>
 
-    </head>
-    
+<main>
+    <div class="calculator-area">
+        <h1>Personal Finance</h1>
+        <div class="mortgage-content">
+            <p>Model with our calculator and start learning about budgeting</p>
+            <button class="calculator_button"><a th:href="@{/calculator}">Start Now</a></button>
+        </div>
+    </div>
+</main>
 
-            
-    </body>
-    
+<div class="chat-container">
+    <div class="chat-icon" onclick="toggleChat()">
+        <img th:src="@{/chatbot.logo.png}" alt="Chatbot Logo">
+    </div>
+    <div class="chat-box" id="chatBox">
+        <div class="chat-header">
+            Chat
+            <span class="close-chat" onclick="toggleChat()">×</span>
+        </div>
+        <div class="chat-messages">
+            <p>Welcome! How can I help you?</p>
+        </div>
+        <input type="text" class="chat-input" placeholder="Type a message...">
+    </div>
+</div>
+
+<script>
+    function toggleChat() {
+        var chatBox = document.getElementById("chatBox");
+        chatBox.style.display = chatBox.style.display === "none" || chatBox.style.display === "" ? "block" : "none";
+    }
+</script>
+
+<section id="footer">
+    <div class="main-footer">
+        <div class="contact-details">
+            <h1>Contact Us</h1>
+            <ul>
+                <li><a href="tel:+91">+91 xxxxxxxxx</a></li>
+                <li><a href="mailto:enquiries@WealthWise.com">enquiries@WealthWise.com</a></li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h1>About</h1>
+            <ul>
+                <li><a th:href="@{/about}">About Us</a></li>
+                <li><a th:href="@{/faq}">FAQ's</a></li>
+            </ul>
+        </div>
+    </div>
+    <footer>© WealthWise 2025 All Rights Reserved</footer>
+</section>
+
+</body>
 </html>

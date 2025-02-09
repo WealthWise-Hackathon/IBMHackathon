@@ -39,6 +39,28 @@ public class MyController {
         return "home";
     }
 
+
+    @GetMapping("/learning")
+    public String learning() {
+        return "learning";
+    }
+
+    @GetMapping("/calculator")
+    public String calculator() {
+        return "calculator";
+    }
+
+    @GetMapping("/faq")
+    public String faq() {
+        return "faq";
+    }
+
+    @GetMapping("/about")
+    public String about() {
+        return "about";
+    }
+
+
     @Autowired
     private UserRepository userRepository;
 
