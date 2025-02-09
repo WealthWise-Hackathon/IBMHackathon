@@ -34,6 +34,10 @@ public class MyController {
     public String login() {
         return "login";
     }
+    @GetMapping("/home")
+    public String home() {
+        return "home";
+    }
 
     @Autowired
     private UserRepository userRepository;

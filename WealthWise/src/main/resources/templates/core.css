@@ -196,7 +196,7 @@ header {
     justify-content: space-evenly; 
     color: white;
     border-radius: 20px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../resources/banner.jpeg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../../../Front End/resources/banner.jpeg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -242,7 +242,7 @@ header {
     height: 60vh; 
     color: white;
     border-radius: 20px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../resources/team.jpeg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../../../Front End/resources/team.jpeg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -294,7 +294,7 @@ header {
     height: 60vh; 
     color: white;
     border-radius: 20px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../resources/about.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../../../Front End/resources/about.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
