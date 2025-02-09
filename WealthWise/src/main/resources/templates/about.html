@@ -1,85 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/core.css">
+    <link rel="stylesheet" th:href="@{/core.css}">
     <title>Core Financial - About</title>
 </head>
 
 <body>
-    <header>
-        <a href="home.html" class="logo"><img src="../../../../../Front%20End/resources/logo.png" alt="Core Financial Logo"></a>
-        <nav class="navigation">
-            <a href="learning.html">Learning Center</a>
-            <a href = "calculator.html">Calculator</a>
-            <a href="faq.html">FAQ's</a>
-            <a href="about.html">About Us</a>
-        </nav>
-    </header>
+<header>
+    <a th:href="@{/home}" class="logo">
+        <img th:src="@{/logo.png}" alt="Core Financial Logo">
+    </a>
+    <nav class="navigation">
+        <a th:href="@{/learning}">Learning Center</a>
+        <a th:href="@{/calculator}">Calculator</a>
+        <a th:href="@{/faq}">FAQ's</a>
+        <a th:href="@{/about}">About Us</a>
+    </nav>
+</header>
 
-    <main>
-        <section class="mission">
-            <h1>Our Mission</h1>
-            <p>
-                Since our inception, we have been <em>driven</em> by our core goal of helping increase financial accument for everyone.
-            </p>
-            <h3>To achieve this, we set a framework:</h3>
-            <ol>
-                <li>
-                    <strong>Customer Centric</strong>
-                    <p>In every decision we make, we always consider what our customers would want if they were in the room with us.</p>
-                </li>
-                <li>
-                    <strong>Data Driven</strong>
-                    <p>We do our best to have information free from bias by relying on accurate data and verifying information independently.</p>
-                </li>
-                <li>
-                    <strong>Expanding Outcomes</strong>
-                    <p>To help as many as people as possible we provide all the information on our website free of any fees</p>
-                </li>
-            </ol>
-        </section>
-        <section class = "differences">
-            <h2>Celebrating Differences</h2>
-            <p>At WealthWise, we believe that diversity is our greatest strength. We celebrate the unique backgrounds, perspectives, and experiences that each individual brings to our community. By fostering an inclusive environment where everyone feels valued and heard, we create opportunities for collaboration, innovation, and growth. <br><br>Embracing diversity not only enriches our culture but also strengthens our ability to connect, learn, and thrive together. We are committed to promoting equity, respect, and understanding, ensuring that every voice contributes to a brighter and more inclusive future.</p>
-        </section>
+<main>
+    <section class="mission">
+        <h1>Our Mission</h1>
+        <p>
+            Since our inception, we have been <em>driven</em> by our core goal of helping increase financial acumen for everyone.
+        </p>
+        <h3>To achieve this, we set a framework:</h3>
+        <ol>
+            <li>
+                <strong>Customer Centric</strong>
+                <p>In every decision we make, we always consider what our customers would want if they were in the room with us.</p>
+            </li>
+            <li>
+                <strong>Data Driven</strong>
+                <p>We do our best to have information free from bias by relying on accurate data and verifying information independently.</p>
+            </li>
+            <li>
+                <strong>Expanding Outcomes</strong>
+                <p>To help as many people as possible, we provide all the information on our website free of any fees.</p>
+            </li>
+        </ol>
+    </section>
 
-        <section class="history">
-            <h2>Our History</h2>
-            <p>
-                Founded with a vision to empower individuals with financial knowledge, Wealth Wise began as a small initiative driven by a passion for financial literacy. Recognizing the gap in accessible, practical, and engaging financial education, our founders set out to create a platform where anyone—regardless of background or experience—could learn to manage money, invest wisely, and build a secure financial future.
+    <section class="differences">
+        <h2>Celebrating Differences</h2>
+        <p>At WealthWise, we believe that diversity is our greatest strength. We celebrate the unique backgrounds, perspectives, and experiences that each individual brings to our community. By fostering an inclusive environment where everyone feels valued and heard, we create opportunities for collaboration, innovation, and growth.</p>
+        <p>Embracing diversity not only enriches our culture but also strengthens our ability to connect, learn, and thrive together. We are committed to promoting equity, respect, and understanding, ensuring that every voice contributes to a brighter and more inclusive future.</p>
+    </section>
 
-<br><br>Over the years, we have grown into a trusted resource, providing expert insights, easy-to-understand guides, and interactive tools to help individuals and businesses make informed financial decisions. Our commitment remains the same: to demystify personal finance and make financial success achievable for all. <br>
-            </p>
-            <div id = "services-link">
-                <p>Start learning now in our Learning Center</p>
-                <a href = "services.html"><button  id = "services-button">Learn more</button></a>
-            </div>
-        </section>
-    </main>
+    <section class="history">
+        <h2>Our History</h2>
+        <p>
+            Founded with a vision to empower individuals with financial knowledge, WealthWise began as a small initiative driven by a passion for financial literacy. Recognizing the gap in accessible, practical, and engaging financial education, our founders set out to create a platform where anyone—regardless of background or experience—could learn to manage money, invest wisely, and build a secure financial future.
+        </p>
+        <p>
+            Over the years, we have grown into a trusted resource, providing expert insights, easy-to-understand guides, and interactive tools to help individuals and businesses make informed financial decisions. Our commitment remains the same: to demystify personal finance and make financial success achievable for all.
+        </p>
 
-
-    <footer>
-        <div class="main-footer">
-            <div class="contact-details">
-                <h1>Contact Us</h1>
-                <ul>
-                    <li><a href="tel:+91">+91 xxxxxxxxx</a></li>
-                    <li><a href="mailto:enquires@corefinancial.com">enquires@corefinancial.com</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h1>About</h1>
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="faq.html">FAQ's</a></li>
-                </ul>
-            </div>
+        <div id="services-link">
+            <p>Start learning now in our Learning Center</p>
+            <a th:href="@{/services}"><button id="services-button">Learn more</button></a>
         </div>
-        <p>© Core Financial 2024 All Rights Reserved</p>
-    </footer>
-</body>
+    </section>
+</main>
 
+<footer>
+    <div class="main-footer">
+        <div class="contact-details">
+            <h1>Contact Us</h1>
+            <ul>
+
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h1>About</h1>
+            <ul>
+                <li><a th:href="@{/about}">About Us</a></li>
+                <li><a th:href="@{/faq}">FAQ's</a></li>
+            </ul>
+        </div>
+    </div>
+    <p>© Core Financial 2024 All Rights Reserved</p>
+</footer>
+</body>
 </html>

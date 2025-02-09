@@ -1,97 +1,87 @@
 <!DOCTYPE html>
-<html lang = "en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/core.css">
-        <title>Core Financial - FAQ'S</title>
-    </head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/core.css}">
+    <title>Core Financial - FAQ'S</title>
+</head>
 
-    <body>
-        <header>
-            <a href="home.html" class="logo"><img src="../../../../../Front%20End/resources/logo.png" alt="Core Financial Logo"></a>
-            <nav class="navigation">
-                <a href="learning.html">Learning Center</a>
-                <a href = "calculator.html">Calculator</a>
-                <a href="faq.html">FAQ's</a>
-                <a href="about.html">About Us</a>
-            </nav>
-        </header>
+<body>
+<header>
+    <a th:href="@{/home}" class="logo">
+        <img th:src="@{/logo.png}" alt="Core Financial Logo">
+    </a>
+    <nav class="navigation">
+        <a th:href="@{/learning}">Learning Center</a>
+        <a th:href="@{/calculator}">Calculator</a>
+        <a th:href="@{/faq}">FAQ's</a>
+        <a th:href="@{/about}">About Us</a>
+    </nav>
+</header>
 
-        <main>
-            <div class="faq-section">
-            <h2>Frequently Asked Questions</h2>
-            <button class = "accordion">What does WealthWise do?</button>
-                <div class = "panel">
-                    <p>WealthWise is a leading financial educational platform, providing resources on a range of topics including financial planning, investment advice, budgeting and money management and much more.</p>
-                </div>
+<main>
+    <div class="faq-section">
+        <h2>Frequently Asked Questions</h2>
 
-            <button class = "accordion">How can I contact WealthWise</button>
-            <div class = "panel">
-                <p>You can reach us via phone at +91 xxxxxxxxx or email us at <a href="mailto:enquires@WealthWise.com">enquires@WealthWise.com</a>.</p>
-            </div>
+        <button class="accordion">What does WealthWise do?</button>
+        <div class="panel">
+            <p>WealthWise is a leading financial educational platform, providing resources on a range of topics including financial planning, investment advice, budgeting, and money management.</p>
+        </div>
 
-            <button class="accordion">Is your content suitable for beginners?</button>
-            <div class="panel">
-                <p>Absolutely! Our platform includes beginner-friendly courses, guides, and resources to help those new to financial education get started on their journey.</p>
-            </div>
-            
-            <button class="accordion">Do you offer investment guidance?</button>
-            <div class="panel">
-                <p>Yes, we provide educational resources on investment strategies, risk management, and portfolio diversification. However, we do not offer direct financial advice.</p>
-            </div>
+        <button class="accordion">How can I contact WealthWise?</button>
+        <div class="panel">
+            <p>You can reach us via phone at +91 xxxxxxxxx or email us at
 
-            <button class="accordion">Who can benefit from your platform?</button>
-            <div class="panel">
-                <p>Anyone looking to improve their financial literacy, including beginners, investors, entrepreneurs, and professionals seeking to manage their wealth more effectively.</p>
-            </div>
-            
+            </p>
+        </div>
 
-            <button class="accordion">Can I ask financial questions directly?</button>
-            <div class="panel">
-                <p>Yes! Our chatbot will allow you to ask any questions that you want and recieve direct feedback on any questions you may have.</p>
-            </div>
+        <button class="accordion">Is your content suitable for beginners?</button>
+        <div class="panel">
+            <p>Absolutely! Our platform includes beginner-friendly courses, guides, and resources to help those new to financial education.</p>
+        </div>
 
-            <button class="accordion">Do you cover cryptocurrency and digital assets?</button>
-            <div class="panel">
-                <p>Not currently, However in future this will be an area that we would like to provide information on, it can be taught indirectly through our chatbot(for those of you really eager).</p>
-            </div>
+        <button class="accordion">Do you offer investment guidance?</button>
+        <div class="panel">
+            <p>Yes, we provide educational resources on investment strategies, risk management, and portfolio diversification. However, we do not offer direct financial advice.</p>
+        </div>
 
-            <script>
-                var acc = document.getElementsByClassName("accordion");
-                var i;
+        <button class="accordion">Who can benefit from your platform?</button>
+        <div class="panel">
+            <p>Anyone looking to improve their financial literacy, including beginners, investors, entrepreneurs, and professionals seeking to manage their wealth more effectively.</p>
+        </div>
 
-                for (i = 0; i < acc.length; i++) {
-                acc[i].addEventListener("click", function() {
-                    this.classList.toggle("active");
-                    var panel = this.nextElementSibling;
-                    if (panel.style.display === "block") {
-                    panel.style.display = "none";
-                    } else {
-                    panel.style.display = "block";
-                    }
-                });
-            }       
-            </script>
-        </main>
+        <button class="accordion">Can I ask financial questions directly?</button>
+        <div class="panel">
+            <p>Yes! Our chatbot allows you to ask any questions and receive direct feedback.</p>
+        </div>
 
-        <section id="footer">
-            <div class="main-footer">
-                <div class="contact-details">
-                    <h1>Contact Us</h1>
-                    <li><a href="tel:+91">+91 xxxxxxxxx</a></li>
-                    <li><a href="mailto:enquires@corefinancial.com">enquires@corefinancial.com</a></li>
-                </div>
-                <div class="footer-links">
-                <h1>About</h1>
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="faq.html">FAQ's</a></li>
-                </ul>
-                </div>
-            </div>
-        <footer>© Core Financial 2024 All Rights Reserved</footer>
-        </section>
-    </body>
-    
+        <button class="accordion">Do you cover cryptocurrency and digital assets?</button>
+        <div class="panel">
+            <p>Not currently, but in the future, we plan to provide more information in this area. For now, our chatbot can offer indirect guidance.</p>
+        </div>
+
+        <script th:src="@{/faq.js}"></script>
+    </div>
+</main>
+
+<section id="footer">
+    <div class="main-footer">
+        <div class="contact-details">
+            <h1>Contact Us</h1>
+            <ul>
+
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h1>About</h1>
+            <ul>
+                <li><a th:href="@{/about}">About Us</a></li>
+                <li><a th:href="@{/faq}">FAQ's</a></li>
+            </ul>
+        </div>
+    </div>
+    <footer>© Core Financial 2024 All Rights Reserved</footer>
+</section>
+</body>
 </html>
