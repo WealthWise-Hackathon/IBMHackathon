@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Quiz Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: radial-gradient(at center top, rgba(23, 10, 191, 1.0), rgba(136, 170, 223, 1.0));
+            color: white;
+            margin: 0;
+            padding: 50px;
+        }
+        .result-container {
+            background: white;
+            color: black;
+            padding: 20px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+        a {
+            display: block;
+            margin-top: 20px;
+            color: #007bff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="result-container">
+    <h1>Quiz Results</h1>
+    <p>Your Score: <span th:text="${score}"></span> / 3</p>
+    <a href="/">Back to Home</a>
+</div>
+
+</body>
+</html>

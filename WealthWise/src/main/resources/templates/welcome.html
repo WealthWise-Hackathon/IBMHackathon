@@ -87,6 +87,7 @@
   <a href="#stocks">Stock Market</a>
   <a href="#budgeting">Personal Budgeting</a>
   <a href="#crypto">Cryptocurrency</a>
+  <a href="quiz">Quiz Time</a>
 </div>
 
 <!-- Content Area -->
@@ -98,18 +99,86 @@
     <a href="/logout">Logout</a>
   </div>
 
-  <!-- Other Content Sections -->
-  <div id="stocks">
+  <!-- Stocks Sections -->
+  <div class="content" id="stocks">
     <h2>Stock Market Basics</h2>
-    <p>Learn how to invest in stocks, analyze trends, and manage risks.</p>
+    <p>The stock market is a marketplace where investors buy and sell shares of publicly traded companies. Stocks represent ownership in a company, and their value fluctuates based on company performance, economic conditions, and investor sentiment.</p>
+    <p>Investors make money in two ways: **capital appreciation** (when stock prices increase) and **dividends** (profits shared with shareholders).</p>
+    <p>Key concepts in stock market investing include:</p>
+    <ul>
+      <li><strong>Blue-chip stocks:</strong> Large, well-established companies known for stability (e.g., Apple, Microsoft).</li>
+      <li><strong>Growth stocks:</strong> Companies expected to grow at an above-average rate (e.g., Tesla, Amazon).</li>
+      <li><strong>Value stocks:</strong> Undervalued companies with strong fundamentals.</li>
+      <li><strong>Index funds & ETFs:</strong> Low-cost investment options that track market indexes (e.g., S&P 500).</li>
+    </ul>
+    <p>Understanding **risk management** and **diversification** is crucial for successful investing.</p>
+    <a href="https://www.investopedia.com/terms/s/stockmarket.asp" target="_blank">Learn more about the stock market</a>
+    <a href="https://www.nerdwallet.com/article/investing/how-to-invest-in-stocks" target="_blank">Beginner's guide to investing</a>
   </div>
-  <div id="budgeting">
+
+  <!-- Personal Budgeting Section -->
+  <div class="content" id="budgeting">
     <h2>Personal Budgeting</h2>
-    <p>Understand how to manage your income, track expenses, and save money effectively.</p>
+    <p>Personal budgeting is the process of planning income and expenses to achieve financial goals. A well-structured budget helps avoid debt, save for future needs, and manage daily expenses effectively.</p>
+    <p>Common budgeting methods:</p>
+    <ul>
+      <li><strong>50/30/20 Rule:</strong> 50% needs, 30% wants, 20% savings/debt payments.</li>
+      <li><strong>Zero-based budgeting:</strong> Every dollar is assigned a purpose, ensuring nothing is wasted.</li>
+      <li><strong>Envelope system:</strong> Physical cash is allocated to different spending categories.</li>
+    </ul>
+    <p>Tracking expenses and adjusting the budget as income or costs change is essential for long-term financial health.</p>
+    <a href="https://www.investopedia.com/terms/b/budget.asp" target="_blank">What is budgeting?</a>
+    <a href="https://www.ramseysolutions.com/budgeting/how-to-budget" target="_blank">How to create a budget</a>
   </div>
-  <div id="crypto">
+
+  <!-- Cryptocurrency Section -->
+  <div class="content" id="crypto">
     <h2>Cryptocurrency</h2>
-    <p>Discover the world of Bitcoin, Ethereum, and how blockchain technology works.</p>
+    <p>Cryptocurrency is a digital currency that uses blockchain technology for secure and decentralized transactions. Unlike traditional money, cryptocurrencies operate without a central authority like a bank.</p>
+    <p>Popular cryptocurrencies:</p>
+    <ul>
+      <li><strong>Bitcoin (BTC):</strong> The first and most well-known cryptocurrency, often referred to as "digital gold."</li>
+      <li><strong>Ethereum (ETH):</strong> Known for its smart contract functionality, enabling decentralized applications.</li>
+      <li><strong>Stablecoins:</strong> Cryptos like USDT or USDC, designed to maintain a stable value tied to fiat currencies.</li>
+    </ul>
+    <p>Investing in crypto requires understanding **market volatility**, **wallet security**, and **regulatory risks**.</p>
+    <a href="https://www.investopedia.com/terms/c/cryptocurrency.asp" target="_blank">What is cryptocurrency?</a>
+    <a href="https://www.coinbase.com/learn" target="_blank">Learn about crypto trading</a>
+  </div>
+
+  <div class="content" id="quiz">
+    <h2>Finance Quiz</h2>
+    <p>Test your knowledge on finance topics!</p>
+
+    <form action="/submit-quiz" method="post">
+
+      <!-- Question 1 -->
+      <div class="question">
+        <p><strong>1. What is a stock?</strong></p>
+        <input type="radio" name="q1" value="a"> A type of cryptocurrency <br>
+        <input type="radio" name="q1" value="b"> Ownership in a company <br>
+        <input type="radio" name="q1" value="c"> A government bond <br>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="question">
+        <p><strong>2. What is the 50/30/20 rule?</strong></p>
+        <input type="radio" name="q2" value="a"> 50% stocks, 30% bonds, 20% savings <br>
+        <input type="radio" name="q2" value="b"> 50% needs, 30% wants, 20% savings <br>
+        <input type="radio" name="q2" value="c"> 50% income, 30% taxes, 20% spending <br>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="question">
+        <p><strong>3. Which cryptocurrency is known as "digital gold"?</strong></p>
+        <input type="radio" name="q3" value="a"> Bitcoin <br>
+        <input type="radio" name="q3" value="b"> Ethereum <br>
+        <input type="radio" name="q3" value="c"> Dogecoin <br>
+      </div>
+
+      <!-- Submit Button -->
+      <input type="submit" value="Submit Quiz">
+    </form>
   </div>
 </div>
 </body>
