@@ -1,0 +1,3 @@
+[submodule "WealthWiseFrontEnd"]
+	path = WealthWiseFrontEnd
+	url = https://github.com/WealthWise-Hackathon/WealthWiseFrontEnd.git
