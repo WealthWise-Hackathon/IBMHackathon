@@ -1,0 +1,86 @@
+﻿body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+header {
+    width: 100%;
+    background-color: #444;
+    color: white;
+    padding: 10px 20px;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.toggle-menu-btn {
+    position: absolute;
+    top: 5px;
+    left: 130px;
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, 'Lucida Console', 'Consolas';
+    border: none;
+    padding: 20px 10px 15px 8px;
+    cursor: pointer;
+    border-radius: 0 0px 15px 0;
+    z-index: 1001;
+}
+.toggle-menu-btn div {
+    transform: scale(1,-2.5);
+}
+
+.sidebar {
+    width: 100px;
+    height: 57vh;
+    background: #333;
+    color: white;
+    padding: 0px 10px 0px 25px;
+    position: fixed;
+    top: 85px;
+    left: -15px;
+    border-radius: 15px;
+}
+
+    .sidebar ul {
+        list-style: none;
+        padding: 5px 0 5px 0;
+        z-index: 1001;
+    }
+
+        .sidebar ul li {
+            margin-bottom: 15px;
+            padding: 4px 5px -2px 4px;
+        }
+
+            .sidebar ul li a {
+                color: white;
+                text-decoration: none;
+                display: block;
+                padding: 5px 0px 5px 4px;
+            }
+
+                .sidebar ul li a:hover {
+                    background-color: #575757;
+                    border-radius: 5px;
+                }
+
+            .sidebar ul li hr {
+                margin: 8px 7px -5px 0px;
+            }
+
+.content {
+    margin-left: 160px;
+    padding: 20px;
+    top: 60px;
+    position: relative;
+}
+
+.bold {
+    font-weight: bold;
+}
+
