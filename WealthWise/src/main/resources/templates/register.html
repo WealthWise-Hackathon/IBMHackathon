@@ -6,90 +6,65 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f3f4f6;
+      background: rgba(23, 10, 191, 1.0);
+      background: radial-gradient(at center top, rgba(23, 10, 191, 1.0), rgba(136, 170, 223, 1.0));
+      background-repeat: no-repeat;
+
       margin: 0;
-      padding: 0;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
     }
-
-    .container {
-      background: white;
+    .form-container {
+      background: #fff;
+      padding: 2rem;
       border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      padding: 20px 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       max-width: 400px;
       width: 100%;
       text-align: center;
     }
-
     h1 {
-      margin-bottom: 20px;
-      font-size: 1.8em;
+      margin-bottom: 1.5rem;
       color: #333;
     }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    input {
-      padding: 10px;
-      font-size: 1em;
+    input[type="text"],
+    input[type="password"] {
+      width: calc(100% - 2rem);
+      padding: 0.8rem;
+      margin-bottom: 1rem;
       border: 1px solid #ccc;
       border-radius: 4px;
-      transition: border-color 0.3s;
-    }
-
-    input:focus {
-      border-color: #007BFF;
+      font-size: 1rem;
       outline: none;
     }
-
-    button {
-      background-color: #007BFF;
-      color: white;
-      padding: 10px;
-      font-size: 1em;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s;
+    input:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
     }
-
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.2rem;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      width: 100%;
+    }
     button:hover {
       background-color: #0056b3;
-    }
-
-    .form-group {
-      text-align: left;
-    }
-
-    label {
-      font-weight: bold;
-      margin-bottom: 5px;
-      display: block;
-      color: #555;
     }
   </style>
 </head>
 
 <body>
-<div class="container">
+<div class="form-container">
   <h1>Register</h1>
   <form action="/register" method="post">
-    <div class="form-group">
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" required />
-    </div>
-    <div class="form-group">
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required />
-    </div>
+    <input type="text" name="username" placeholder="Username" required />
+    <input type="password" name="password" placeholder="Password" required />
     <button type="submit">Register</button>
   </form>
 </div>
