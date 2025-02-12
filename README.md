@@ -4,7 +4,7 @@
 - Phoenix B (sb1039@student.le.ac.uk)
 - Josh D (jds46@student.le.ac.uk)
 - Simon D (sd611@student.le.ac.uk)
-- Craig L (cl530@student.le.ac.uk)
+- Craig L (cl530@student.le.ac.uk) (Commits from Thefroster123 our from craig L)
 
 **How to run:**
 1. The MySQL workbench database may be local so if it does not work connect to your own database by changing these in `application.properties` to your own:
