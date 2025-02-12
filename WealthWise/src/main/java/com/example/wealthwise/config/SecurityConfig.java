@@ -24,7 +24,7 @@ public class SecurityConfig {
         http.csrf(csrf -> csrf.disable()).authorizeHttpRequests(request ->
                         request.requestMatchers("/register", "/login").permitAll().anyRequest().authenticated()).
                 formLogin(form -> form.loginPage("/login").loginProcessingUrl("/login").
-                        defaultSuccessUrl("/welcome", true).permitAll()).logout(logout ->
+                        defaultSuccessUrl("/home", true).permitAll()).logout(logout ->
                         logout.logoutSuccessUrl("/login").permitAll()).userDetailsService(userDetails);
         return http.build();
     }
